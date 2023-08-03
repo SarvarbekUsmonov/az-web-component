@@ -950,7 +950,19 @@ Object.keys(_isServer).forEach(function (key) {
     }
   });
 });
-},{"@lit/reactive-element":"node_modules/@lit/reactive-element/reactive-element.js","lit-html":"node_modules/lit-html/lit-html.js","lit-element/lit-element.js":"node_modules/lit-element/lit-element.js","lit-html/is-server.js":"node_modules/lit-html/is-server.js"}],"dist/my-component.js":[function(require,module,exports) {
+},{"@lit/reactive-element":"node_modules/@lit/reactive-element/reactive-element.js","lit-html":"node_modules/lit-html/lit-html.js","lit-element/lit-element.js":"node_modules/lit-element/lit-element.js","lit-html/is-server.js":"node_modules/lit-html/is-server.js"}],"dist/styles/buttonStyles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.buttonStyles = void 0;
+var _lit = require("lit");
+var _templateObject;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var buttonStyles = (0, _lit.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .large {\n    font-size: 24px;\n    padding: 15px 30px;\n  }\n  .medium {\n    font-size: 20px;\n    padding: 10px 20px;\n  }\n  .small {\n    font-size: 16px;\n    padding: 5px 10px;\n  }\n  .btn-red {\n    background-color: #dc3545;\n    color: white;\n  }\n  .btn-blue {\n    background-color: #0c234b;\n    color: white;\n  }\n  .btn-success {\n    background-color: #70b865;\n    color: white;\n  }\n  .btn-danger {\n    background-color: #a95c42;\n    color: white;\n  }\n  .btn-warning {\n    background-color: #f19e1f;\n    color: #000;\n  }\n  .btn-info {\n    background-color: #81d3eb;\n    color: #001c48;\n  }\n  .btn-light {\n    background-color: #dee2e6;\n    color: #001c48;\n  }\n  .btn-dark {\n    background-color: #343a40;\n    color: #fff;\n  }\n"])));
+exports.buttonStyles = buttonStyles;
+},{"lit":"node_modules/lit/index.js"}],"dist/my-component.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -958,7 +970,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.MyComponent = void 0;
 var _lit = require("lit");
-var _templateObject, _templateObject2;
+var _buttonStyles = require("./styles/buttonStyles");
+var _templateObject;
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -977,21 +990,33 @@ var MyComponent = /*#__PURE__*/function (_LitElement) {
   _inherits(MyComponent, _LitElement);
   var _super = _createSuper(MyComponent);
   function MyComponent() {
+    var _this;
     _classCallCheck(this, MyComponent);
-    return _super.apply(this, arguments);
+    _this = _super.call(this);
+    _this.size = 'medium';
+    _this.btntype = 'deafulttype';
+    return _this;
   }
   _createClass(MyComponent, [{
     key: "render",
     value: function render() {
-      return (0, _lit.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <h1>Hello Lit!</h1>\n      <button>Arizona</button>\n    "])));
+      return (0, _lit.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <button class=\"", " ", "\">\n        <slot></slot>\n      </button>\n    "])), this.size, this.btntype);
     }
   }]);
   return MyComponent;
 }(_lit.LitElement);
 exports.MyComponent = MyComponent;
-MyComponent.styles = (0, _lit.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    :host {\n      display: block;\n      padding: 16px;\n      background-color: #f5f5f5;\n      color: #333;\n    }\n  "])));
+MyComponent.styles = [_buttonStyles.buttonStyles];
+MyComponent.properties = {
+  size: {
+    type: String
+  },
+  btntype: {
+    type: String
+  }
+};
 customElements.define('my-component', MyComponent);
-},{"lit":"node_modules/lit/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"lit":"node_modules/lit/index.js","./styles/buttonStyles":"dist/styles/buttonStyles.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1016,7 +1041,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60076" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53424" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

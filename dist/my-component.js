@@ -1,18 +1,23 @@
-import { html, css, LitElement } from 'lit';
-export class MyComponent extends LitElement {
+import { LitElement, html } from 'lit';
+import { buttonStyles } from './styles/buttonStyles';
+class MyComponent extends LitElement {
+    constructor() {
+        super();
+        this.size = 'medium';
+        this.btntype = 'deafulttype';
+    }
     render() {
         return html `
-      <h1>Hello Lit!</h1>
-      <button>Arizona</button>
+      <button class="${this.size} ${this.btntype}">
+        <slot></slot>
+      </button>
     `;
     }
 }
-MyComponent.styles = css `
-    :host {
-      display: block;
-      padding: 16px;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-  `;
+MyComponent.styles = [buttonStyles];
+MyComponent.properties = {
+    size: { type: String },
+    btntype: { type: String }
+};
 customElements.define('my-component', MyComponent);
+export { MyComponent };

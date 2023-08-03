@@ -24,6 +24,9 @@
   "devDependencies": {
     "lite-server": "^2.6.1",
     "parcel-bundler": "^1.12.5",
+    "rollup": "^3.26.3",
+    "rollup-plugin-lit-css": "^4.0.1",
+    "rollup-plugin-scss": "^4.0.0",
     "typescript": "^5.1.6"
   }
 }

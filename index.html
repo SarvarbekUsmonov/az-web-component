@@ -2,9 +2,103 @@
 <html>
   <head>
     <title>Lit Web Component Example</title>
+    <!-- Proxima Nova font. -->
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        
+      }
+
+      .container {
+        display: inline-block;
+        flex-direction: column;
+        border: 1px solid gray;
+        background-color:#f8f9fa;
+        margin-bottom: 20px;
+        padding: 10px;
+        margin-left: 20px !important;
+      }
+      
+      .outline-container {
+        background-color: lightyellow !important;
+      }
+    </style>
+    <!-- Arizona bootstrap -->
+    <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.24/css/arizona-bootstrap.min.css" crossorigin="anonymous">
   </head>
   <body>
-    <my-component></my-component>
-    <script type="module" src="dist/my-component.js"></script>
+    <div class="container">
+      <button type="button" class="btn btn-red">Red</button>
+      <button type="button" class="btn btn-blue">Blue</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+    </div>
+
+    <div class="container">
+      <az-button size="small" btntype="btn-red">Red</az-button>
+      <az-button size="small" btntype="btn-blue">Blue</az-button>
+      <az-button size="small" btntype="btn-success">Success</az-button>
+      <az-button size="small" btntype="btn-danger">Danger</az-button>
+      <az-button size="small" btntype="btn-warning">Warning</az-button>
+      <az-button size="small" btntype="btn-info">Info</az-button>
+      <az-button size="small" btntype="btn-light">Light</az-button>
+      <az-button size="small" btntype="btn-dark">Dark</az-button>
+    </div>
+
+    <br>
+
+
+    <div class="container">
+
+      <button type="button" class="btn btn-outline-red">Red</button>
+      <button type="button" class="btn btn-outline-blue">Blue</button>
+      <button type="button" class="btn btn-outline-success">Success</button>
+      <button type="button" class="btn btn-outline-danger">Danger</button>
+      <button type="button" class="btn btn-outline-warning">Warning</button>
+      <button type="button" class="btn btn-outline-info">Info</button>
+      <button type="button" class="btn btn-outline-light">Light</button>
+      <button type="button" class="btn btn-outline-dark">Dark</button>
+    </div>
+    
+    <br>
+    <div class="container outline-container">
+      <az-button size="small" btntype="btn-outline-red">Red</az-button>
+      <az-button size="small" btntype="btn-outline-blue">Blue</az-button>
+      <az-button size="small" btntype="btn-outline-success">Success</az-button>
+      <az-button size="small" btntype="btn-outline-danger">Danger</az-button>
+      <az-button size="small" btntype="btn-outline-warning">Warning</az-button>
+      <az-button size="small" btntype="btn-outline-info">Info</az-button>
+      <az-button size="small" btntype="btn-outline-light">Light</az-button>
+      <az-button size="small" btntype="btn-outline-dark">Dark</az-button>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <button type="button" class="btn btn-lg">Large button</button>
+      <button type="button" class="btn btn-md">Medium button</button>
+      <button type="button" class="btn btn-sm">Small button</button>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <az-button size="large">Large button</az-button>
+      <az-button size="medium">Medium button</az-button>
+      <az-button size="small">Small button</az-button>
+    </div>
+
+
+    <script type="module" src="dist/az-button.js"></script>
+    
+    <!-- AZ bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js" integrity="sha384-MYL22lstpGhSa4+udJSGro5I+VfM13fdJfCbAzP9krCEoK5r2EDFdgTg2+DGXdj+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.24/js/arizona-bootstrap.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
