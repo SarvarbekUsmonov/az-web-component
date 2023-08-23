@@ -1370,7 +1370,7 @@ exports.buttonStyles = void 0;
 var _lit = require("lit");
 var _templateObject;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var buttonStyles = (0, _lit.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\n   *, .medium {\n    cursor: pointer;\n    font-weight: 500;\n    text-transform: uppercase;\n    text-decoration: none;\n    letter-spacing: .04em;\n    white-space: normal;\n    border-width: 2px;\n    display: inline-block;\n    \n    text-align: center;\n    vertical-align: middle;\n    background-color: transparent;\n    border: 2px solid transparent;\n    border-radius: 0;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    margin: 0 !important;\n    padding: 0.375rem 0.75rem;\n    font-family: inherit;\n    border-radius: 0;\n  }\n  .large {\n    padding: 0;\n    font-size: 1.25rem;\n    line-height: 1.5;\n  }  \n\n  .medium {\n    padding: 0 !important;\n  }\n\n  .small {\n    padding: 0;\n    font-size: 0.875rem;\n    line-height: 1.5;\n  }\n\n\n  .btn-red, .btn-outline-red:hover {\n    background-color: #8b0015;\n    color: white;\n  }\n  .btn-red:hover {\n    background-color: #ab0520;\n    color: white;\n  }\n\n\n  .btn-blue, .btn-outline-blue:hover {\n    background-color: #0c234b;\n    color: white;\n  }\n  .btn-blue:hover {\n    background-color: #1e5288;\n    color: white;\n  }\n\n\n  .btn-success, .btn-outline-success:hover {\n    background-color: #70b865;\n    color: #001c48;\n  }\n  .btn-success:hover {\n    background-color: #5aa94e;\n    color: #001c48;\n  }\n\n\n  .btn-danger, .btn-outline-danger:hover {\n    background-color: #a95c42;\n    color: white;\n  }\n  .btn-danger:hover {\n    background-color: #8d4d37;\n    color: #fff;\n  }\n\n\n  .btn-warning, .btn-outline-warning:hover {\n    background-color: #f19e1f;\n    color: #000;\n  }\n  .btn-warning:hover {\n    background-color: #dc8a0e;\n    color: #000;\n  }\n\n\n  .btn-info, .btn-outline-info:hover {\n    background-color: #81d3eb;\n    color: #001c48;\n  }\n  .btn-info:hover {\n    background-color: #60c7e6;\n  }\n\n\n  .btn-light, .btn-outline-light:hover {\n    background-color: #dee2e6;\n    color: #001c48;\n  }\n  .btn-light:hover {\n    background-color: #c8cfd6;\n  }\n\n\n  .btn-dark, .btn-outline-dark:hover {\n    background-color: #343a40;\n    color: #fff;\n  }\n  .btn-dark:hover {\n    background-color: #23272b;\n  }\n\n  \n\n  .btn-outline-red {\n    background-color: transparent;\n    color: #8b0015;\n    border: 2px solid #8b0015;\n  }\n  .btn-outline-blue {\n    background-color: transparent;\n    color: #0c234b;\n    border: 2px solid #0c234b;\n  }\n  .btn-outline-success {\n    background-color: transparent;\n    color: #70b865;\n    border: 2px solid #70b865;\n  }\n  .btn-outline-danger {\n    background-color: transparent;\n    color: #a95c42;\n    border: 2px solid #a95c42;\n  }\n  .btn-outline-warning {\n    background-color: transparent;\n    color: #403635;\n    border: 2px solid #f19e1f;\n  }\n  .btn-outline-info {\n    background-color: transparent;\n    color: #1e5288;\n    border: 2px solid #81d3eb;\n  }\n  .btn-outline-light {\n    background-color: transparent;\n    color: #403635;\n    border: 2px solid #dee2e6;\n  }\n  .btn-outline-dark {\n    background-color: transparent;\n    color: #343a40;\n    border: 2px solid #343a40;\n  }\n"])));
+var buttonStyles = (0, _lit.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  * {\n    cursor: pointer;\n    font-weight: 500;\n    text-transform: uppercase;\n    text-decoration: none;\n    letter-spacing: .04em;\n    white-space: normal;\n    display: inline-block;\n    text-align: center;\n    vertical-align: middle;\n    background-color: transparent;\n    border-color: transparent;\n    border-radius: 0;\n    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n    margin: 0;\n    border-radius: 0;\n    font-family: proxima-nova,calibri,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";\n    line-height: 1.5;\n  }\n\n  .makeitred{\n    color: red;\n  }\n  .default {\n    padding: 0.375rem 0.75rem;\n    font-size: 1rem;\n  }\n\n  .large {\n    padding: 0.5rem 1rem;\n    font-size: 1.25rem;\n  }  \n\n  .medium {\n    padding: .375rem .75rem;\n    font-size: 1rem;\n  }\n\n  .small {\n    padding: .25rem .5rem;\n    font-size: .875rem;\n  }\n\n  .btn-red, .btn-outline-red:hover {\n    background-color: #8b0015;\n    color: white;\n  }\n  .btn-red:hover, .btn-red-hover {\n    background-color: #ab0520;\n    color: white;\n  }\n\n\n  .btn-blue, .btn-outline-blue:hover {\n    background-color: #0c234b;\n    color: white;\n  }\n  .btn-blue:hover, .btn-blue-hover {\n    background-color: #1e5288;\n    color: white;\n  }\n\n\n  .btn-success, .btn-outline-success:hover {\n    background-color: #70b865;\n    color: #001c48;\n  }\n  .btn-success:hover, .btn-success-hover {\n    background-color: #5aa94e;\n    color: #001c48;\n  }\n\n\n  .btn-danger, .btn-outline-danger:hover {\n    background-color: #a95c42;\n    color: white;\n  }\n  .btn-danger:hover, .btn-danger-hover {\n    background-color: #8d4d37;\n    color: #fff;\n  }\n\n\n  .btn-warning, .btn-outline-warning:hover {\n    background-color: #f19e1f;\n    color: #000;\n  }\n  .btn-warning:hover, .btn-warning-hover {\n    background-color: #dc8a0e;\n    color: #000;\n  }\n\n\n  .btn-info, .btn-outline-info:hover {\n    background-color: #81d3eb;\n    color: #001c48;\n  }\n  .btn-info:hover, .btn-info-hover {\n    background-color: #60c7e6;\n  }\n\n\n  .btn-light, .btn-outline-light:hover {\n    background-color: #dee2e6;\n    color: #001c48;\n  }\n  .btn-light:hover, .btn-light-hover {\n    background-color: #c8cfd6;\n  }\n\n\n  .btn-dark, .btn-outline-dark:hover {\n    background-color: #343a40;\n    color: #fff;\n  }\n  .btn-dark:hover, .btn-dark-hover {\n    background-color: #23272b;\n  }\n\n  .btn-white, .btn-outline-white:hover {\n    background-color: #fff;\n    color: #343a40;\n  }\n  \n\n  .btn-outline-red {\n    background-color: transparent;\n    color: #8b0015;\n    border: 2px solid #8b0015;\n  }\n  .btn-outline-blue {\n    background-color: transparent;\n    color: #0c234b;\n    border: 2px solid #0c234b;\n  }\n  .btn-outline-success {\n    background-color: transparent;\n    color: #70b865;\n    border: 2px solid #70b865;\n  }\n  .btn-outline-danger {\n    background-color: transparent;\n    color: #a95c42;\n    border: 2px solid #a95c42;\n  }\n  .btn-outline-warning {\n    background-color: transparent;\n    color: #403635;\n    border: 2px solid #f19e1f;\n  }\n  .btn-outline-info {\n    background-color: transparent;\n    color: #1e5288;\n    border: 2px solid #81d3eb;\n  }\n  .btn-outline-light {\n    background-color: transparent;\n    color: #403635;\n    border: 2px solid #dee2e6;\n  }\n  .btn-outline-dark {\n    background-color: transparent;\n    color: #343a40;\n    border: 2px solid #343a40;\n  }\n  .btn-outline-white {\n    background-color: transparent;\n    color: #fff;\n    border: 2px solid #fff;\n  }\n\n  .btn-block {\n    width: 100% !important;\n    display: block !important;\n    margin: 0.5rem;\n  }\n\n  .btn-arrow-arrow:after {\n    content: \" \xBB\";\n  }\n"])));
 exports.buttonStyles = buttonStyles;
 },{"lit":"node_modules/lit/index.js"}],"dist/az-button.js":[function(require,module,exports) {
 "use strict";
@@ -1387,6 +1387,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get.bind(); } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
@@ -1408,20 +1410,43 @@ var __decorate = void 0 && (void 0).__decorate || function (decorators, target, 
 var AzButton = (_class = /*#__PURE__*/function (_LitElement) {
   _inherits(AzButton, _LitElement);
   var _super = _createSuper(AzButton);
+  // Default to false
   function AzButton() {
     var _this;
     _classCallCheck(this, AzButton);
     _this = _super.call(this);
-    _defineProperty(_assertThisInitialized(_this), "size", 'medium');
+    _defineProperty(_assertThisInitialized(_this), "size", 'default');
     _defineProperty(_assertThisInitialized(_this), "btntype", 'defaulttype');
-    _this.size = 'medium';
+    _defineProperty(_assertThisInitialized(_this), "display", 'default');
+    _defineProperty(_assertThisInitialized(_this), "arrow", false);
+    _this.size = 'default';
     _this.btntype = 'defaulttype';
+    _this.display = 'default';
+    _this.arrow = false; // Default to false
     return _this;
   }
   _createClass(AzButton, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      _get(_getPrototypeOf(AzButton.prototype), "connectedCallback", this).call(this);
+      this.injectStylesheetIfNotExists();
+    }
+  }, {
+    key: "injectStylesheetIfNotExists",
+    value: function injectStylesheetIfNotExists() {
+      var stylesheetUrl = 'https://use.typekit.net/emv3zbo.css';
+      if (!document.head.querySelector("link[href=\"".concat(stylesheetUrl, "\"]"))) {
+        var linkEl = document.createElement('link');
+        linkEl.href = stylesheetUrl;
+        linkEl.rel = 'stylesheet';
+        linkEl.crossOrigin = 'anonymous';
+        document.head.appendChild(linkEl);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      return (0, _lit.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <button class=\"", " ", "\">\n        <slot></slot>\n      </button>\n    "])), this.size, this.btntype);
+      return (0, _lit.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      <button class=\"", " ", " btn-", " ", " aria-pressed='true'\">\n        <slot></slot>\n      </button>\n    "])), this.size, this.btntype, this.display, this.arrow ? 'btn-arrow-arrow' : '');
     }
   }]);
   return AzButton;
@@ -1433,45 +1458,14 @@ __decorate([(0, _decorators.property)({
 __decorate([(0, _decorators.property)({
   type: String
 })], AzButton.prototype, "btntype", void 0);
+__decorate([(0, _decorators.property)({
+  type: String
+})], AzButton.prototype, "display", void 0);
+__decorate([(0, _decorators.property)({
+  type: Boolean
+}) // Change the property type to Boolean
+], AzButton.prototype, "arrow", void 0);
 exports.AzButton = AzButton = __decorate([(0, _decorators.customElement)('az-button')], AzButton);
-// import { LitElement, html } from 'lit';
-// import { customElement, property } from 'lit/decorators.js';
-// @customElement('az-button')
-// export class AzButton extends LitElement {
-//   @property({ type: String })
-//   size: 'large' | 'medium' | 'small' = 'medium';
-//   @property({ type: String })
-//   btntype: 'defaulttype' | 'btn-red' | 'btn-blue' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark' | 'btn-outline-red' | 'btn-outline-blue' | 'btn-outline-success' | 'btn-outline-danger' | 'btn-outline-warning' | 'btn-outline-info' | 'btn-outline-light' | 'btn-outline-dark' = 'defaulttype';
-//   constructor() {
-//     super();
-//   }
-//   get btnClass() {
-//     let sizeClass = '';
-//     switch (this.size) {
-//       case 'large':
-//         sizeClass = 'btn-lg';
-//         break;
-//       case 'small':
-//         sizeClass = 'btn-sm';
-//         break;
-//       default:
-//         sizeClass = '';
-//         break;
-//     }
-//     let typeClass = '';
-//     if(this.btntype !== 'defaulttype') {
-//       typeClass = this.btntype;
-//     }
-//     return `btn ${typeClass} ${sizeClass}`;
-//   }
-//   render() {
-//     return html`
-//       <button type="button" class="${this.btnClass}">
-//         <slot></slot>
-//       </button>
-//     `;
-//   }
-// }
 },{"lit":"node_modules/lit/index.js","lit/decorators.js":"node_modules/lit/decorators.js","./styles/buttonStyles":"dist/styles/buttonStyles.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1497,7 +1491,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59667" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58805" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

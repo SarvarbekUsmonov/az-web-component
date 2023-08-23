@@ -9,16 +9,34 @@ import { customElement, property } from 'lit/decorators.js';
 import { buttonStyles } from './styles/buttonStyles';
 export let AzButton = class AzButton extends LitElement {
     static styles = [buttonStyles];
-    size = 'medium';
+    size = 'default';
     btntype = 'defaulttype';
+    display = 'default';
+    arrow = false; // Default to false
     constructor() {
         super();
-        this.size = 'medium';
+        this.size = 'default';
         this.btntype = 'defaulttype';
+        this.display = 'default';
+        this.arrow = false; // Default to false
+    }
+    connectedCallback() {
+        super.connectedCallback();
+        this.injectStylesheetIfNotExists();
+    }
+    injectStylesheetIfNotExists() {
+        const stylesheetUrl = 'https://use.typekit.net/emv3zbo.css';
+        if (!document.head.querySelector(`link[href="${stylesheetUrl}"]`)) {
+            const linkEl = document.createElement('link');
+            linkEl.href = stylesheetUrl;
+            linkEl.rel = 'stylesheet';
+            linkEl.crossOrigin = 'anonymous';
+            document.head.appendChild(linkEl);
+        }
     }
     render() {
         return html `
-      <button class="${this.size} ${this.btntype}">
+      <button class="${this.size} ${this.btntype} btn-${this.display} ${this.arrow ? 'btn-arrow-arrow' : ''} aria-pressed='true'">
         <slot></slot>
       </button>
     `;
@@ -30,44 +48,12 @@ __decorate([
 __decorate([
     property({ type: String })
 ], AzButton.prototype, "btntype", void 0);
+__decorate([
+    property({ type: String })
+], AzButton.prototype, "display", void 0);
+__decorate([
+    property({ type: Boolean }) // Change the property type to Boolean
+], AzButton.prototype, "arrow", void 0);
 AzButton = __decorate([
     customElement('az-button')
 ], AzButton);
-// import { LitElement, html } from 'lit';
-// import { customElement, property } from 'lit/decorators.js';
-// @customElement('az-button')
-// export class AzButton extends LitElement {
-//   @property({ type: String })
-//   size: 'large' | 'medium' | 'small' = 'medium';
-//   @property({ type: String })
-//   btntype: 'defaulttype' | 'btn-red' | 'btn-blue' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark' | 'btn-outline-red' | 'btn-outline-blue' | 'btn-outline-success' | 'btn-outline-danger' | 'btn-outline-warning' | 'btn-outline-info' | 'btn-outline-light' | 'btn-outline-dark' = 'defaulttype';
-//   constructor() {
-//     super();
-//   }
-//   get btnClass() {
-//     let sizeClass = '';
-//     switch (this.size) {
-//       case 'large':
-//         sizeClass = 'btn-lg';
-//         break;
-//       case 'small':
-//         sizeClass = 'btn-sm';
-//         break;
-//       default:
-//         sizeClass = '';
-//         break;
-//     }
-//     let typeClass = '';
-//     if(this.btntype !== 'defaulttype') {
-//       typeClass = this.btntype;
-//     }
-//     return `btn ${typeClass} ${sizeClass}`;
-//   }
-//   render() {
-//     return html`
-//       <button type="button" class="${this.btnClass}">
-//         <slot></slot>
-//       </button>
-//     `;
-//   }
-// }

@@ -3,12 +3,18 @@
   <head>
     <title>Lit Web Component Example</title>
     <!-- Proxima Nova font. -->
-    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous"> -->
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        
-      }
+      .fixed-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
 
       .container {
         display: inline-block;
@@ -21,14 +27,17 @@
       }
       
       .outline-container {
-        background-color: lightyellow !important;
+        background-color: f8f9fa !important;
       }
     </style>
     <!-- Arizona bootstrap -->
     <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.24/css/arizona-bootstrap.min.css" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <br>
+    <button id="toggleButton" class="btn btn-primary fixed-button">Toggle Elements</button>
+
+    <div class="container toggle-hide-test">
       <button type="button" class="btn btn-red">Red</button>
       <button type="button" class="btn btn-blue">Blue</button>
       <button type="button" class="btn btn-success">Success</button>
@@ -40,20 +49,19 @@
     </div>
 
     <div class="container">
-      <az-button size="small" btntype="btn-red">Red</az-button>
-      <az-button size="small" btntype="btn-blue">Blue</az-button>
-      <az-button size="small" btntype="btn-success">Success</az-button>
-      <az-button size="small" btntype="btn-danger">Danger</az-button>
-      <az-button size="small" btntype="btn-warning">Warning</az-button>
-      <az-button size="small" btntype="btn-info">Info</az-button>
-      <az-button size="small" btntype="btn-light">Light</az-button>
-      <az-button size="small" btntype="btn-dark">Dark</az-button>
+      <az-button btntype="btn-red">Red</az-button>
+      <az-button btntype="btn-blue">Blue</az-button>
+      <az-button btntype="btn-success">Success</az-button>
+      <az-button btntype="btn-danger">Danger</az-button>
+      <az-button btntype="btn-warning">Warning</az-button>
+      <az-button btntype="btn-info">Info</az-button>
+      <az-button btntype="btn-light">Light</az-button>
+      <az-button btntype="btn-dark">Dark</az-button>
     </div>
 
-    <br>
+    <br class="toggle-hide-test">
 
-
-    <div class="container">
+    <div class="container toggle-hide-test">
 
       <button type="button" class="btn btn-outline-red">Red</button>
       <button type="button" class="btn btn-outline-blue">Blue</button>
@@ -67,22 +75,23 @@
     
     <br>
     <div class="container outline-container">
-      <az-button size="small" btntype="btn-outline-red">Red</az-button>
-      <az-button size="small" btntype="btn-outline-blue">Blue</az-button>
-      <az-button size="small" btntype="btn-outline-success">Success</az-button>
-      <az-button size="small" btntype="btn-outline-danger">Danger</az-button>
-      <az-button size="small" btntype="btn-outline-warning">Warning</az-button>
-      <az-button size="small" btntype="btn-outline-info">Info</az-button>
-      <az-button size="small" btntype="btn-outline-light">Light</az-button>
-      <az-button size="small" btntype="btn-outline-dark">Dark</az-button>
+      <az-button btntype="btn-outline-red">Red</az-button>
+      <az-button btntype="btn-outline-blue">Blue</az-button>
+      <az-button btntype="btn-outline-success">Success</az-button>
+      <az-button btntype="btn-outline-danger">Danger</az-button>
+      <az-button btntype="btn-outline-warning">Warning</az-button>
+      <az-button btntype="btn-outline-info">Info</az-button>
+      <az-button btntype="btn-outline-light">Light</az-button>
+      <az-button btntype="btn-outline-dark">Dark</az-button>
     </div>
 
-    <br>
+    <br class="toggle-hide-test">
 
-    <div class="container">
+    <div class="container toggle-hide-test">
       <button type="button" class="btn btn-lg">Large button</button>
       <button type="button" class="btn btn-md">Medium button</button>
       <button type="button" class="btn btn-sm">Small button</button>
+      <button type="button" class="btn">Default button</button>
     </div>
 
     <br>
@@ -91,14 +100,95 @@
       <az-button size="large">Large button</az-button>
       <az-button size="medium">Medium button</az-button>
       <az-button size="small">Small button</az-button>
+      <az-button>Default button</az-button>
     </div>
 
+    <br>
+
+    <div class="container toggle-hide-test">
+      <div class="bg-dark p-3">
+        <button type="button" class="btn btn-outline-white">White</button>
+      </div>
+      <div class="bg-red p-3">
+        <button type="button" class="btn btn-outline-white">White</button>
+      </div>
+      <div class="bg-blue p-3">
+        <button type="button" class="btn btn-outline-white">White</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="bg-dark p-3">
+        <az-button btntype="btn-outline-white">White</az-button>
+      </div>
+      <div class="bg-red p-3">
+        <az-button btntype="btn-outline-white">White</az-button>
+      </div>
+      <div class="bg-blue p-3">
+        <az-button btntype="btn-outline-white">White</az-button>
+      </div>
+    </div>
+
+
+    <div class="container toggle-hide-test">
+      <button type="button" class="btn btn-red btn-lg btn-block">Block level button</button>
+      <button type="button" class="btn btn-blue btn-lg btn-block">Block level button</button>
+    </div>
+
+    <div class="container">
+      <az-button display="block" size="large" btntype="btn-red">Block level button</az-button>
+      <az-button display="block" size="large" btntype="btn-blue">Block level button</az-button>
+    </div>
+
+    <div class="container toggle-hide-test">
+      <button type="button" class="btn btn-lg btn-red btn-arrow">Large Arrow Button</button>
+      <button type="button" class="btn btn-lg btn-blue btn-arrow">Large Arrow Button</button>
+      <button type="button" class="btn btn-lg btn-info btn-arrow">Large Arrow Button</button>
+      <button type="button" class="btn btn-lg btn-outline-success btn-arrow">Large Arrow Button</button>
+    </div>
+
+    <div class="container">
+      <az-button size="large" btntype="btn-red" arrow="true">Large Arrow Button</az-button>
+      <az-button size="large" btntype="btn-blue" arrow="true">Large Arrow Button</az-button>
+      <az-button size="large" btntype="btn-info" arrow="true">Large Arrow Button</az-button>
+      <az-button size="large" btntype="btn-outline-success" arrow="true">Large Arrow Button</az-button>
+    </div>
+
+
+    <div class="container">
+      <a href="#" class="btn btn-red btn-lg active" role="button" aria-pressed="true">Red link</a>
+      <a href="#" class="btn btn-blue btn-lg active" role="button" aria-pressed="true">Link</a>
+    </div>
+
+    <div class="container">
+      <az-button size="large" btntype="btn-red" state="active">Red link </az-button>
+    </div>
+    
+
+
+    <div>
+      <p class="makeitred">It's not supposed to be red. (If it's not red, it means that the css of a web component isn't being applied to the other lements.)</p>
+    </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.getElementById("toggleButton");
+        const toggleElements = document.querySelectorAll(".toggle-hide-test");
+  
+        toggleButton.addEventListener("click", function() {
+          toggleElements.forEach(element => {
+            element.classList.toggle("hidden");
+          });
+        });
+      });
+    </script>
 
     <script type="module" src="dist/az-button.js"></script>
     
     <!-- AZ bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js" integrity="sha384-MYL22lstpGhSa4+udJSGro5I+VfM13fdJfCbAzP9krCEoK5r2EDFdgTg2+DGXdj+" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.24/js/arizona-bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.24/js/arizona-bootstrap.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
